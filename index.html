@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>San Valentino 💘 – Il Sì che scappa</title>
+  <meta name="description" content="Pagina romantica e giocosa: il Sì scappa, risolvi l'indovinello per fermarlo. Cuori animati e design responsive." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sfondo cuori -->
+  <div class="hearts-bg" id="hearts-bg" aria-hidden="true"></div>
+
+  <main class="wrap" role="main">
+    <section class="card" aria-live="polite">
+      <!-- Logo/indizio (discreto) -->
+      <button class="logo" id="logoClue" aria-label="Logo">
+        <span aria-hidden="true">❤︎</span>
+      </button>
+
+      <div class="emoji" id="emoji">🥰</div>
+      <h1 class="title">Vuoi essere la mia <span class="gradient">Valentina</span>?</h1>
+      <p class="tagline">Prometto <strong>risate</strong>, <strong>abbracci</strong> e <strong>tanti baci</strong>. 💗</p>
+
+      <div class="btns" role="group" aria-label="Scegli una risposta">
+        <button id="yesBtn" class="btn btn-yes" aria-label="Sì, con tutto il cuore">Sì 💖</button>
+        <button id="noBtn" class="btn btn-no" aria-label="No">No 😅</button>
+      </div>
+
+      <!-- Indovinello (compare dopo 5 tentativi) -->
+      <div id="riddle" class="riddle" role="status" aria-live="assertive" hidden>
+        <span class="riddle-emoji" aria-hidden="true">🧩</span>
+        <p class="riddle-text">
+          <em>“Non sono un bottone, ma porto un cuore.  
+          Mi trovi dove nasce la luce del giorno.  
+          Se mi tocchi, il Sì si poserà.”</em>
+        </p>
+      </div>
+
+      <!-- Messaggio finale -->
+      <div id="success" class="success" hidden>
+        <div class="emoji">😍</div>
+        <h2 class="success-title">Lo sapevo! 💞</h2>
+        <p class="success-msg">Che inizi la festa di San Valentino! 🎉</p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Canvas effetti (confetti/cuori) -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
